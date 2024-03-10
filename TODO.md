@@ -1,0 +1,31 @@
+## TODO
+*See assignment sheet for details*
+
+- [ ] BinaryTree.h
+  - [ ] Private attributes and functions
+    - [ ] TreeNode struct
+    - [ ] Insert function
+    - [ ] destroySubTree function
+    - [ ] displayInOrder function
+  - [ ] Public functions
+    - [ ] Constructor
+    - [ ] Destructor
+    - [ ] insertNode
+    - [ ] displayInOrder
+    - [ ] searchNode
+- [ ] Pokemon.h
+  - [ ] Private info
+    - [ ] Pokemon index number
+    - [ ] Pokemon name
+  - [ ] Public info
+    - [ ] Constructor
+    - [ ] setID
+    - [ ] setName
+    - [ ] getID
+    - [ ] getName
+    - [ ] overloaded `<` operator
+    - [ ] overloaded `==` operator
+    - [ ] overloaded `<<` operator
+- [ ] Program3.cpp driver
+- [ ] Test and check against grading rubric
+- [ ] Submit!
