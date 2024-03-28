@@ -14,16 +14,16 @@
     - [x] displayInOrder
     - [x] searchNode
   - [ ] Add comments
-- [ ] Pokemon.h
-  - [ ] Private info
-    - [ ] Pokemon index number
-    - [ ] Pokemon name
+- [x] Pokemon.h
+  - [x] Private info
+    - [x] Pokemon index number
+    - [x] Pokemon name
   - [ ] Public info
-    - [ ] Constructor
-    - [ ] setID
-    - [ ] setName
-    - [ ] getID
-    - [ ] getName
+    - [x] Constructor
+    - [x] setID
+    - [x] setName
+    - [x] getID
+    - [x] getName
     - [ ] overloaded `<` operator
     - [ ] overloaded `==` operator
     - [ ] overloaded `<<` operator
