@@ -2,17 +2,18 @@
 *See assignment sheet for details*
 
 - [ ] BinaryTree.h
-  - [ ] Private attributes and functions
-    - [ ] TreeNode struct
-    - [ ] Insert function
-    - [ ] destroySubTree function
-    - [ ] displayInOrder function
-  - [ ] Public functions
-    - [ ] Constructor
-    - [ ] Destructor
-    - [ ] insertNode
-    - [ ] displayInOrder
-    - [ ] searchNode
+  - [x] Private attributes and functions
+    - [x] TreeNode struct
+    - [x] Insert function
+    - [x] destroySubTree function
+    - [x] displayInOrder function
+  - [x] Public functions
+    - [x] Constructor
+    - [x] Destructor
+    - [x] insertNode
+    - [x] displayInOrder
+    - [x] searchNode
+  - [ ] Add comments
 - [ ] Pokemon.h
   - [ ] Private info
     - [ ] Pokemon index number
@@ -26,6 +27,8 @@
     - [ ] overloaded `<` operator
     - [ ] overloaded `==` operator
     - [ ] overloaded `<<` operator
+  - [ ] Add comments
 - [ ] Program3.cpp driver
+  - [ ] Add comments
 - [ ] Test and check against grading rubric
 - [ ] Submit!

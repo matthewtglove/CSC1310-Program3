@@ -22,20 +22,87 @@ private:
     TreeNode *rootNode;
 
     void insert(TreeNode *&nodePtr, TreeNode *&newNode) {
-        // Insert
         if (nodePtr == nullptr) {
             nodePtr = newNode;
             return;
         }
 
-        // Move left
         if (newNode->value < nodePtr->value) {
             insert(nodePtr->left, newNode);
             return;
         }
 
-        // Move right
         insert(nodePtr->right, newNode);
+    }
+
+    void destroySubTree(TreeNode *nodePtr) {
+        if (nodePtr == nullptr) {
+            return;
+        }
+
+        if (nodePtr->left) {
+            destroySubTree(nodePtr->left);
+        }
+        if (nodePtr->right) {
+            destroySubTree(nodePtr->right);
+        }
+        delete nodePtr;
+    }
+
+    void displayInOrder(TreeNode *nodePtr) const {
+        if (nodePtr == nullptr) {
+            return;
+        }
+
+        displayInOrder(nodePtr->left);
+        cout << nodePtr->value << endl;
+        displayInOrder(nodePtr->right);
+    }
+
+public:
+    BinaryTree() {
+        rootNode = nullptr;
+    }
+
+    ~BinaryTree() {
+        destoySubTree(rootNode);
+    }
+
+    void insertNode(T newItem) {
+        TreeNode *newNode = new TreeNode;
+        newNode->value = newItem;
+        newNode->left = nullptr;
+        newNode->right = nullptr;
+
+        insert(rootNode, newNode);
+    }
+
+    void displayInOrder(TreeNode *nodePtr) const {
+        if (nodePtr == nullptr) {
+        }
+
+        this->displayInOrder(rootNode);
+    }
+
+    bool searchNode(T item) const {
+        if (rootNode == nullptr) {
+            return false;
+        }
+
+        TreeNode *currentNode = rootNode;
+        while (currentNode) {
+            if (currentNode->value == item) {
+                return true;
+            }
+
+            if (item < currentNode->value) {
+                currentNode = currentNode->left;
+                continue;
+            }
+
+            currentNode = currentNode->right;
+        }
+        return false;
     }
 };
 
