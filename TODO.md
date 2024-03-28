@@ -2,30 +2,33 @@
 *See assignment sheet for details*
 
 - [ ] BinaryTree.h
-  - [ ] Private attributes and functions
-    - [ ] TreeNode struct
-    - [ ] Insert function
-    - [ ] destroySubTree function
-    - [ ] displayInOrder function
-  - [ ] Public functions
-    - [ ] Constructor
-    - [ ] Destructor
-    - [ ] insertNode
-    - [ ] displayInOrder
-    - [ ] searchNode
-- [ ] Pokemon.h
-  - [ ] Private info
-    - [ ] Pokemon index number
-    - [ ] Pokemon name
+  - [x] Private attributes and functions
+    - [x] TreeNode struct
+    - [x] Insert function
+    - [x] destroySubTree function
+    - [x] displayInOrder function
+  - [x] Public functions
+    - [x] Constructor
+    - [x] Destructor
+    - [x] insertNode
+    - [x] displayInOrder
+    - [x] searchNode
+  - [ ] Add comments
+- [x] Pokemon.h
+  - [x] Private info
+    - [x] Pokemon index number
+    - [x] Pokemon name
   - [ ] Public info
-    - [ ] Constructor
-    - [ ] setID
-    - [ ] setName
-    - [ ] getID
-    - [ ] getName
+    - [x] Constructor
+    - [x] setID
+    - [x] setName
+    - [x] getID
+    - [x] getName
     - [ ] overloaded `<` operator
     - [ ] overloaded `==` operator
     - [ ] overloaded `<<` operator
+  - [ ] Add comments
 - [ ] Program3.cpp driver
+  - [ ] Add comments
 - [ ] Test and check against grading rubric
 - [ ] Submit!
