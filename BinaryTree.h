@@ -1,13 +1,15 @@
-/*
-    Title: BinaryTree.h
-    Author: John Herron and Matthew Love
-    Date: 2024-03-28, Thu
-    Purpose: A generic binary tree
-*/
+/*😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎
+  😎 Filename: BinaryTree.cpp                                     😎
+  😎 Author:   John Herron & Matthew Love                         😎
+  😎 Date:     March 28 2024                                      😎
+  😎 Purpose:  Allowing the user to add pokemon to their pokedex  😎
+  😎           through the use of binary trees                    😎
+  😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 */
 
 #ifndef BINARYTREE_H
 #define BINARYTREE_H
 
+#include "Pokemon.h"
 #include <iostream>
 using namespace std;
 
@@ -105,7 +107,7 @@ public:
         insert(rootNode, newNode); // call the insert node to place the node into the tree
     }
 
-    void displayInOrder(TreeNode *nodePtr) const {
+    void displayInOrder() const {
 
         // TODO: This is redundant
         // if (nodePtr == nullptr) {
@@ -127,11 +129,14 @@ public:
         // While currentNode points to a node
         while (currentNode) {
             // If the current nodes value is equal to the item sent in to the function then return true
+
+            cout << (currentNode->value == item) << endl;
             if (currentNode->value == item) {
                 return true;
             }
 
             // if item is less than the current nodes value then go the the left child node and continue
+
             if (item < currentNode->value) {
                 currentNode = currentNode->left; // set current node to its left child node
                 continue;                        // continue will skip over the rest of the while loop body and rerun the while loop from the top

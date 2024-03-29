@@ -1,7 +1,7 @@
 ## TODO
 *See assignment sheet for details*
 
-- [ ] BinaryTree.h
+- [x] BinaryTree.h
   - [x] Private attributes and functions
     - [x] TreeNode struct
     - [x] Insert function
@@ -13,22 +13,24 @@
     - [x] insertNode
     - [x] displayInOrder
     - [x] searchNode
-  - [ ] Add comments
+  - [x] Add comments
 - [x] Pokemon.h
   - [x] Private info
     - [x] Pokemon index number
     - [x] Pokemon name
-  - [ ] Public info
+  - [x] Public info
     - [x] Constructor
     - [x] setID
     - [x] setName
     - [x] getID
     - [x] getName
-    - [ ] overloaded `<` operator
-    - [ ] overloaded `==` operator
-    - [ ] overloaded `<<` operator
-  - [ ] Add comments
+    - [x] overloaded `<` operator
+    - [x] overloaded `==` operator
+    - [x] overloaded `<<` operator
+  - [x] Add comments
+- [x] 😎 
 - [ ] Program3.cpp driver
   - [ ] Add comments
+- [ ] DEBUGGING!!!
 - [ ] Test and check against grading rubric
 - [ ] Submit!
