@@ -15,22 +15,21 @@ using namespace std;
 template <typename T>
 class BinaryTree {
 private:
-    // 
+    //
     struct TreeNode {
-        T value;          // Value in the node
-        TreeNode *left;   // Pointer to the left child node
-        TreeNode *right;  // pointer to the right child node
+        T value;         // Value in the node
+        TreeNode *left;  // Pointer to the left child node
+        TreeNode *right; // pointer to the right child node
     };
 
-    TreeNode *rootNode;   // Pointer to the root node
+    TreeNode *rootNode; // Pointer to the root node
 
-
-//  ***** Private functions *****
-//        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-/*
-    This function takes in a TreeNode pointer and a pointer to a new node. Then the new node will be inserted into 
-    the tree. This function finds the available position in the tree using recursion.
-*/
+    //  ***** Private functions *****
+    //        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    /*
+        This function takes in a TreeNode pointer and a pointer to a new node. Then the new node will be inserted into
+        the tree. This function finds the available position in the tree using recursion.
+    */
     void insert(TreeNode *&nodePtr, TreeNode *&newNode) {
 
         // If an empty null pointer is found then insert the node at that position
@@ -41,15 +40,15 @@ private:
 
         // If the new node is less than the current node then go left in the tree
         if (newNode->value < nodePtr->value) {
-            insert(nodePtr->left, newNode); // recursively call the function 
+            insert(nodePtr->left, newNode); // recursively call the function
             return;
         }
-        
+
         // If the new node is equal to or greater than then this recursive line will be called, which takes us down to the nodes right child
         insert(nodePtr->right, newNode);
     }
 
-    // This function will delete the entire tree using recursion
+    // This function will delete the tree using recursion
     void destroySubTree(TreeNode *nodePtr) {
         // if the node ptr is pointing to null then return from the function because the tree is empty
         if (nodePtr == nullptr) {
@@ -83,8 +82,8 @@ private:
         displayInOrder(nodePtr->right); // recursively call with the right child
     }
 
-//  ***** Public functions *****
-//        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    //  ***** Public functions *****
+    //        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 public:
     // *Constructor*
     BinaryTree() {
@@ -98,19 +97,20 @@ public:
 
     // This insertNode function will call the insert function sending in the root and the new node we just created using this function
     void insertNode(T newItem) {
-        TreeNode *newNode = new TreeNode; // dynamically create a new node 
+        TreeNode *newNode = new TreeNode; // dynamically create a new node
         newNode->value = newItem;         // set the nodes value to the value sent in by the function
         newNode->left = nullptr;          // set the left node pointer to null
         newNode->right = nullptr;         // set the right node pointer to null
 
-        insert(rootNode, newNode);        // call the insert node to place the node into the tree
+        insert(rootNode, newNode); // call the insert node to place the node into the tree
     }
 
     void displayInOrder(TreeNode *nodePtr) const {
 
-        // TODO: Ask Matthew why this if statement is here
-        if (nodePtr == nullptr) {
-        }
+        // TODO: This is redundant
+        // if (nodePtr == nullptr) {
+        //     return;
+        // }
 
         this->displayInOrder(rootNode); // call the private displayInOrder function sending in the rootNode
     }
@@ -123,25 +123,25 @@ public:
         }
 
         TreeNode *currentNode = rootNode; // create  current node pointer and set it to the root node
-        
-        // While currentNode points to a node 
+
+        // While currentNode points to a node
         while (currentNode) {
             // If the current nodes value is equal to the item sent in to the function then return true
             if (currentNode->value == item) {
                 return true;
             }
 
-            // if item is less than the current nodes value then go the the left child node and continue 
+            // if item is less than the current nodes value then go the the left child node and continue
             if (item < currentNode->value) {
                 currentNode = currentNode->left; // set current node to its left child node
-                continue; // continue will skip over the rest of the while loop body and rerun the while loop from the top
+                continue;                        // continue will skip over the rest of the while loop body and rerun the while loop from the top
             }
 
             // If the item is greater than or equal to the current nodes value then proceed with the next line of code
-            currentNode = currentNode->right; // set current node to the right node 
+            currentNode = currentNode->right; // set current node to the right node
         }
         // if the node was not found then return false from the function
-        return false; 
+        return false;
     }
 };
 
