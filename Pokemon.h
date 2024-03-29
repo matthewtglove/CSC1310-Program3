@@ -19,25 +19,32 @@ class Pokemon
         string pokeName;
 
     public:
+        // Default name and ID for the pokemon
         Pokemon(int Index = 0, string Name = "None")
         {
             pokemonIndex = Index;
             pokeName = Name;
         }
 
+        // To set the pokemon's ID
         void setID(int pokeID)
         {
             pokemonIndex = pokeID;
         }
 
+        // To set the pokemon's name
         void setName(string Name)
         {
             pokeName = Name;
         }
+
+        // To get the pokemon's ID
         int getID() const
         {
             return pokemonIndex;
         }
+
+        // To get the pokemon's name
         string getName() const
         {
             return pokeName;
