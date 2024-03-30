@@ -54,5 +54,5 @@
     - [x] Consistent, easy-to-read indentions
     - [x] Appropriate variable names
     - [x] No unnecessary code or comments
-- [ ] Add Git Graph picture to README
+- [x] Add Git Graph picture to README
 - [ ] Zip and Submit!
