@@ -29,8 +29,8 @@
     - [x] overloaded `<<` operator
   - [x] Add comments
 - [x] 😎 
-- [ ] Program3.cpp driver
-  - [ ] Add comments
+- [x] Program3.cpp driver
+  - [x] Add comments
 - [x] DEBUGGING!!!
 - [ ] Test and check against grading rubric
 - [ ] Submit!
