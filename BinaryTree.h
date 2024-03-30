@@ -84,8 +84,8 @@ private:
         displayInOrder(nodePtr->right);    // recursively call with the right child
     }
 
-    //  ***** Public functions *****
-    //        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+//  ***** Public functions *****
+//        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 public:
     // *Constructor*
     BinaryTree() {
