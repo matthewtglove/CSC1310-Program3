@@ -48,7 +48,7 @@ int main() {
         inPokeFile.close(); // after the file has read in the pokemon from the file then close the file
     } 
     else {
-        cout << "Could not open file pokedex.txt" << endl;
+        cout << "ERROR: Could not open file pokedex.txt" << endl;
     }
 
         cout << endl

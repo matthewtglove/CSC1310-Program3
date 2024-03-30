@@ -33,4 +33,26 @@
   - [x] Add comments
 - [x] DEBUGGING!!!
 - [ ] Test and check against grading rubric
-- [ ] Submit!
+  - [ ] Compile
+  - [ ] BinaryTree.h
+    - [ ] Implemented as a template class
+    - [ ] TreeNode struct pointer to root is correct
+    - [ ] Private functions are correct: Insert, destroySubTree, displayInOrder
+    - [ ] Public functions are correct: Constructor, Destructor, insertNode, displayInOrder, searchNode
+  - [ ] Pokemon.h
+    - [ ] Attributes are as specified
+    - [ ] Functions: Constructor, setID, setName, getID, getName, overloaded < operator, overloaded == operator, overloaded << operator. Program must contain all these functions even if they are not used by driver.
+  - [ ] Program3.cpp
+    - [ ] Correctly creates Binary Search Tree object
+    - [ ] Correctly reads in all Pokemon data from provided text file, creates Pokemon objects, inserts into Binary Search Tree
+    - [ ] Does not insert duplicates
+    - [ ] Prints out messages to user as specified
+    - [ ] Prints how many pokemon are inserted
+    - [ ] Displays all Pokemon in order
+  - [ ] Readability of code
+    - [ ] Comment block at top of all header and source files 😎
+    - [ ] Consistent, easy-to-read indentions
+    - [ ] Appropriate variable names
+    - [ ] No unnecessary code or comments
+- [ ] Add Git Graph picture to README
+- [ ] Zip and Submit!
