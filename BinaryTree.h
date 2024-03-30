@@ -1,9 +1,9 @@
 /*😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎
-  😎 Filename: BinaryTree.cpp                                     😎
-  😎 Author:   John Herron & Matthew Love                         😎
-  😎 Date:     March 28 2024                                      😎
-  😎 Purpose:  Allowing the user to add pokemon to their pokedex  😎
-  😎           through the use of binary trees                    😎
+  😎 Filename: BinaryTree.cpp                                      😎
+  😎 Author:   John Herron & Matthew Love                          😎
+  😎 Date:     March 28 2024                                       😎
+  😎 Purpose:  Allowing the user to add pokemon to their pokedex   😎
+  😎           through the use of binary trees                     😎
   😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 */
 
 #ifndef BINARYTREE_H
@@ -84,8 +84,8 @@ private:
         displayInOrder(nodePtr->right);    // recursively call with the right child
     }
 
-    //  ***** Public functions *****
-    //        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+//  ***** Public functions *****
+//        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 public:
     // *Constructor*
     BinaryTree() {

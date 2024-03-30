@@ -1,15 +1,16 @@
 /*😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎
-  😎 Filename: Pokemon.cpp                                        😎
-  😎 Author:   John Herron & Matthew Love                         😎
-  😎 Date:     March 28 2024                                      😎
-  😎 Purpose:  Allowing the user to add pokemon to their pokedex  😎
-  😎           through the use of binary trees                    😎
+  😎 Filename: Pokemon.cpp                                         😎
+  😎 Author:   John Herron & Matthew Love                          😎
+  😎 Date:     March 28 2024                                       😎
+  😎 Purpose:  Allowing the user to add pokemon to their pokedex   😎
+  😎           through the use of binary trees                     😎
   😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 */
 
 #ifndef POKEMON_H
 #define POKEMON_H
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 class Pokemon {
@@ -44,7 +45,7 @@ public:
         return pokeName;
     }
 
-    // TODO:
+
     // overloaded < operator to compare pokemon by index
     bool operator<(const Pokemon &p) const {
         // return true if the pokemon before the < sign is less than the pokemon after
@@ -67,7 +68,7 @@ public:
 
     // overloaded << operator to print out a pokemon's index and name
     friend ostream &operator<<(ostream &os, const Pokemon &p) {
-        os << "Pokemon Index: " << p.pokemonIndex << "\t\tName: " << p.pokeName;
+        os << "Pokemon Index Number: " << left << setw(10) << p.pokemonIndex << "Name: " << p.pokeName;
         return os;
     }
 };
