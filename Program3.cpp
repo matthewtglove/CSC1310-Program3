@@ -1,9 +1,9 @@
 /*😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎
-  😎 Filename: Program3.cpp                                       😎
-  😎 Author:   John Herron & Matthew Love                         😎
-  😎 Date:     March 28 2024                                      😎
-  😎 Purpose:  Allowing the user to add pokemon to their pokedex  😎
-  😎           through the use of binary trees                    😎
+  😎 Filename: Program3.cpp                                        😎
+  😎 Author:   John Herron & Matthew Love                          😎
+  😎 Date:     March 28 2024                                       😎
+  😎 Purpose:  Allowing the user to add pokemon to their pokedex   😎
+  😎           through the use of binary trees                     😎
   😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 😎 */
 
 #include "BinaryTree.h"
@@ -15,63 +15,56 @@
 using namespace std;
 
 int main() {
-    BinaryTree<Pokemon *> pokedex;
+    BinaryTree<Pokemon *> pokedex; // make a binary tree of data type pokemon pointer and name it pokedex
 
-    // TEST
-    Pokemon *poke1 = new Pokemon(45, "Pikachu");
-    Pokemon *poke2 = new Pokemon(20, "Bulbasaur");
-    Pokemon *poke3 = new Pokemon(20, "Tom");
-
-    cout << (poke2 < poke1) << endl;
-    bool b1 = (poke1 == poke2);
-    cout << b1 << endl;
-    bool b2 = (poke3 == poke2);
-    cout << b2 << endl;
-
-    cout << "Hello trainer, Master Vandergriff" << endl
-         << endl;
+    cout << "\nHello trainer, Master Vandergriff\n" << endl;
 
     ifstream inPokeFile;
     inPokeFile.open("pokedex.txt");
 
-    int pokedexCount = 0;
+    int pokedexCount = 0; // keeps count of total pokemon in the pokedex
 
-    string stringPokeIndex;
-    int pokeIndex;
-    string pokeName;
-    if (inPokeFile.good()) {
-        while (getline(inPokeFile, stringPokeIndex, '#')) {
-            pokeIndex = stoi(stringPokeIndex);
+    string stringPokeIndex; // read in number from file must first be a string
+    int pokeIndex;          // Transform the string to an int for pokeIndex after reading it from the file
+    string pokeName;        // holds name for the pokemon from the file
 
-            getline(inPokeFile, pokeName, '#');
+    if (inPokeFile.good()) { // make sure the file can be opened
+        while (getline(inPokeFile, stringPokeIndex, '#')) { // make a while loop and read in the pokeindex until the #
+            pokeIndex = stoi(stringPokeIndex); // convert the poke index from a string to an integer
 
-            Pokemon *newPokemon = new Pokemon(pokeIndex, pokeName);
+            getline(inPokeFile, pokeName, '#'); // read in pokemon's name
 
+            Pokemon *newPokemon = new Pokemon(pokeIndex, pokeName); // dynamically allocate a pokemon object and send in the variables we just collected
+            
+            // if searchNode finds the pokemon within the tree then tell the user that that pokemon is already in the pokedex 
             if (pokedex.searchNode(newPokemon)) {
                 cout << "Oops!\tThe Pokemon with index " << pokeIndex << " is already in the Pokedex." << endl;
-            } else {
+            } else { // else means the pokemon isn't a duplicate and can be inserted
                 pokedex.insertNode(newPokemon);
                 cout << "Inserting Pokemon with index " << pokeIndex << " into the Pokedex." << endl;
-                pokedexCount++;
+                pokedexCount++; // increment the counter since a pokemon has been inserted
             }
         }
+        inPokeFile.close(); // after the file has read in the pokemon from the file then close the file
+    } 
+    else {
+        cout << "Could not open file pokedex.txt" << endl;
+    }
 
         cout << endl
-             << pokedexCount << " Pokemon have been added to the Pokedex!" << endl
-             << endl;
+            << pokedexCount << " Pokemon have been added to the Pokedex!\n" << endl
+            << endl;
 
         cout << setw(20) << setfill('*') << "";
         cout << "POKEDEX:";
-        cout << setw(20) << setfill('*') << "";
+        cout << setw(20) << setfill('*') << "" << endl;
         cout << setfill(' ') << endl;
 
+        // call display order to print the pokedex to the user
         pokedex.displayInOrder();
 
         cout << endl
-             << "Goodbye!" << endl;
+            << "Goodbye!" << endl;
 
-    } else {
-        cout << "Could not open file pokedex.txt" << endl;
-    }
     return 0;
 }
