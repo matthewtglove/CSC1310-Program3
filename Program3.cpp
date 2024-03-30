@@ -40,7 +40,8 @@ int main() {
             // if searchNode finds the pokemon within the tree then tell the user that that pokemon is already in the pokedex
             if (pokedex.searchNode(newPokemon)) {
                 cout << "Oops!\tThe Pokemon with index " << pokeIndex << " is already in the Pokedex." << endl;
-            } else { // else means the pokemon isn't a duplicate and can be inserted
+                delete newPokemon; // delete the new pokemon object since it is a duplicate
+            } else {               // else means the pokemon isn't a duplicate and can be inserted
                 pokedex.insertNode(newPokemon);
                 cout << "Inserting Pokemon with index " << pokeIndex << " into the Pokedex." << endl;
                 pokedexCount++; // increment the counter since a pokemon has been inserted
