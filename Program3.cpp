@@ -34,7 +34,7 @@ int main() {
     ifstream inPokeFile;
     inPokeFile.open("pokedex.txt");
 
-    int pokedexCount;
+    int pokedexCount = 0;
 
     string stringPokeIndex;
     int pokeIndex;

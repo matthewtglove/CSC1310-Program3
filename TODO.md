@@ -31,6 +31,6 @@
 - [x] 😎 
 - [ ] Program3.cpp driver
   - [ ] Add comments
-- [ ] DEBUGGING!!!
+- [x] DEBUGGING!!!
 - [ ] Test and check against grading rubric
 - [ ] Submit!

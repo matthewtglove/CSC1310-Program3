@@ -41,7 +41,7 @@ private:
         }
 
         // If the new node is less than the current node then go left in the tree
-        if (newNode->value < nodePtr->value) {
+        if (*(newNode->value) < *(nodePtr->value)) {
             insert(nodePtr->left, newNode); // recursively call the function
             return;
         }
@@ -79,9 +79,9 @@ private:
             return;
         }
 
-        displayInOrder(nodePtr->left);  // recursively call with the left child
-        cout << nodePtr->value << endl; // print the value at the current node
-        displayInOrder(nodePtr->right); // recursively call with the right child
+        displayInOrder(nodePtr->left);     // recursively call with the left child
+        cout << *(nodePtr->value) << endl; // print the value at the current node
+        displayInOrder(nodePtr->right);    // recursively call with the right child
     }
 
     //  ***** Public functions *****
@@ -108,12 +108,6 @@ public:
     }
 
     void displayInOrder() const {
-
-        // TODO: This is redundant
-        // if (nodePtr == nullptr) {
-        //     return;
-        // }
-
         this->displayInOrder(rootNode); // call the private displayInOrder function sending in the rootNode
     }
 
@@ -130,14 +124,13 @@ public:
         while (currentNode) {
             // If the current nodes value is equal to the item sent in to the function then return true
 
-            cout << (currentNode->value == item) << endl;
-            if (currentNode->value == item) {
+            if (*(currentNode->value) == *item) {
                 return true;
             }
 
             // if item is less than the current nodes value then go the the left child node and continue
 
-            if (item < currentNode->value) {
+            if (*item < *(currentNode->value)) {
                 currentNode = currentNode->left; // set current node to its left child node
                 continue;                        // continue will skip over the rest of the while loop body and rerun the while loop from the top
             }

@@ -67,9 +67,7 @@ public:
 
     // overloaded << operator to print out a pokemon's index and name
     friend ostream &operator<<(ostream &os, const Pokemon &p) {
-        os << "Pokemon Index Number: " << p.pokemonIndex;
-        os << "\t\t Name: " << p.pokeName << endl;
-
+        os << "Pokemon Index: " << p.pokemonIndex << "\t\tName: " << p.pokeName;
         return os;
     }
 };
